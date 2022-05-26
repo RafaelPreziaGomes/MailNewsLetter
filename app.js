@@ -20,23 +20,7 @@ app.post("/", function(req, res){
   console.log(lastName)
   console.log(email)
 
-  var data = {
-    members: [
-    {
-    email_adress: email,
-    status: "subscribed",
-    FNAME: firstName,
-    LNAME: lastName
-  }] }
 
-
-  const jsonData = JSON.stringify(data);
-
-  https.request("https://usX.api.mailchimp.com/3.0/lists/2518dc9d48", opitions, funciton(reponse) {
-    response.on("data", function(data){
-      console.log(JSON.parse(data);
-    })
-  })
 })
 
 app.listen("3000", function(){
